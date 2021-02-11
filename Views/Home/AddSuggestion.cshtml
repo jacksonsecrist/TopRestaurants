@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Suggest a Restaurant!";
+}
+@model RestaurantSuggestion
+ 
+<div class="">
+    <h3>Suggest a Top Restaurant!</h3>
+    <br />
+    <form method="post">
+        <label asp-for="SuggesterName">Please enter your name:</label>
+        <input asp-for="SuggesterName" class="form-control not-full"/>
+        <br />
+        <label asp-for="RestaurantName">Restaurant Name:</label>
+        <input asp-for="RestaurantName" class="form-control not-full" />
+        <br />
+        <label asp-for="FavoriteDish">Your Favorite Dish:</label>
+        <input asp-for="FavoriteDish" class="form-control not-full"/>
+        <br />
+        <label asp-for="Phone">Restaurant Phone Number:</label>
+        <input asp-for="Phone" class="form-control not-full"/>
+        <br />
+        <div asp-validation-summary="All"></div>
+        <br />
+        <input type="submit" class="btn btn-success" value="Add Suggestion"/>
+    </form>
+</div>

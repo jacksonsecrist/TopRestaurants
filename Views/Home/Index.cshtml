@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Welcome";
+}
+@model IEnumerable<string>
+<div class="text-center">
+    <h3>Welcome to the Top 5 Restaurants of Utah</h3>
+    <br />
+    <h5>Our Recommendations:</h5>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="~/img/restaurants-in-provo.png" width="500" />
+        </div>
+        <div class="col-md-6">
+            <div class="list-group" style="list-style:none; padding-left:0;">
+                @foreach (string str in Model)
+                {
+                    <span class="list-group-item">@Html.Raw(str)</span>
+                }
+            </div>
+        </div>
+    </div>
+</div>

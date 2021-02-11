@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Suggested Restaurants";
+}
+@model IEnumerable<RestaurantSuggestion>
+<div>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Submitted By:</th>
+                <th>Restaurant Name:</th>
+                <th>Favorite Dish:</th>
+                <th>Restaurant Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(RestaurantSuggestion rest in Model)
+            {
+                <tr>
+                    <td>@rest.SuggesterName</td>
+                    <td>@rest.RestaurantName</td>
+                    <td>@rest.FavoriteDish</td>
+                    <td>@rest.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

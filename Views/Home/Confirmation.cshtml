@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "Success!";
+}
+@model RestaurantSuggestion
+<div style="text-align:center;">
+    <h2>Success! @Model.RestaurantName has been added to the list of suggested restaurants!</h2>
+    <br />
+    <a asp-controller="Home" asp-action="ViewSuggestions" class="btn btn-primary">View All Suggestions</a>
+</div>
